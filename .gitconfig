@@ -1,17 +1,58 @@
 [user]
-	name = Roman Perminov
-	email = permidon@me.com
-[core]
-	autocrlf = false
-	safecrlf = true
-	excludesfile = ~/.gitignore
+  name  = Roman Perminov
+  email = permidon@me.com
+
+[credential]
+  helper = GIT_CREDENTIAL_HELPER
+
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	type = cat-file -t
-	dump = cat-file -p
+  a    = add
+  all  = add -A
+  st   = status -sb
+  ci   = commit -m
+  ca   = commit --amend
+  br   = branch
+  co   = checkout
+  df   = diff
+  dfc  = diff --cached
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  lg   = log --pretty=format:'%C(yellow)%h%Creset %Cgreen(%><(12)%cr%><|(12))%Creset - %s %C(blue)<%an>%Creset'
+  pl   = pull
+  ps   = push
+  undo = reset --soft HEAD^
+  sta  = stash
+  stap = stash apply
+  uall = reset .
+  sync = !git pull origin master && git push nikolalsvk master
+  type = cat-file -t
+  dump = cat-file -p
+
+[color]
+  diff   = auto
+  status = auto
+  branch = auto
+  ui     = true
+
+[core]
+  excludesfile = ~/.gitignore
+  editor       = vim
+  autocrlf     = input
+  safecrlf     = false
+
+[apply]
+  whitespace = nowarn
+
+[mergetool]
+  keepBackup = false
+
+[difftool]
+  prompt = false
+
+[help]
+  autocorrect = 1
+
+[pull]
+  default = current
+
 [push]
-	default = simple
+  default = current
