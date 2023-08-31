@@ -1,9 +1,9 @@
 font:
   size: 14
   offset:
-    y: 3
+    y: 4
   glyph_offset:
-    y: 1
+    y: 2
   normal:
     family: "FiraCode Nerd Font"
 window:
