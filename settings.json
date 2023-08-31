@@ -1,0 +1,328 @@
+{
+  "workbench.settings.editor": "json",
+  "workbench.activityBar.visible": false,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontSize": 14,
+  // "editor.fontLigatures": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "workbench.quickOpen.closeOnFocusLost": false,
+  "workbench.editor.showIcons": false,
+  "explorer.openEditors.visible": 1,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "underline",
+  "extensions.ignoreRecommendations": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "telemetry.telemetryLevel": "off",
+  "files.exclude": {
+    "**/node_modules": true,
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "emmet.includeLanguages": {
+    "erb": "html",
+  },
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#444444",
+    "terminal.foreground": "#BE9296",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.infoForeground": "#fff0"
+  },
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.currentLine.details": false,
+  "gitlens.hovers.annotations.details": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "files.associations": {
+    "*.erb": "erb"
+  },
+  "terminal.integrated.showExitAlert": false,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.scrollback": 7500,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "explorer.confirmDelete": false,
+  "workbench.iconTheme": null,
+  "ruby.rubocop.executePath": "/home/permidon/.rbenv/shims/",
+  "ruby.rubocop.configFilePath": "/home/permidon/.rubocop.yml",
+  "problems.decorations.enabled": false,
+  "editor.scrollbar.verticalScrollbarSize": 20,
+  "ruby.useLanguageServer": true,
+  "editor.guides.indentation": true,
+  "git.enableSmartCommit": false,
+  "git.showCommitInput": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "editor.bracketPairColorization.enabled": false,
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Slime",
+  "git.mergeEditor": false,
+  "editor.lineNumbers": "relative",
+  "vim.easymotion": false,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "after": [
+        "<C-d>",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "<C-u>"
+      ],
+      "after": [
+        "<C-u>",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<C-w>",
+        "h"
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "after": [
+        "<C-w>",
+        "l"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "b",
+        "n"
+      ],
+      "commands": [
+        ":tabnext"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "b",
+        "p"
+      ],
+      "commands": [
+        ":tabprev"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "c"
+      ],
+      "commands": [
+        ":tabclose"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "h"
+      ],
+      "commands": [
+        ":noh"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save",
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen",
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "s",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.findInFiles",
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "l",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "l",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "l",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "l",
+        "A"
+      ],
+      "commands": [
+        "code-runner.run"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "l",
+        "R"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": [
+        "K",
+      ],
+      "commands": [
+        "editor.action.showDefinitionPreviewHover"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "l",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "l",
+        "D"
+      ],
+      "commands": [
+        "editor.action.goToDeclaration"
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "after": [
+        ">",
+        "g",
+        "v"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "after": [
+        "<",
+        "g",
+        "v"
+      ]
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  }
+}
+
