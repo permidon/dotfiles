@@ -1,6 +1,5 @@
 {
   "workbench.settings.editor": "json",
-  "workbench.activityBar.visible": false,
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
@@ -45,29 +44,24 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 7500,
   "terminal.integrated.cursorStyle": "underline",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "editor.rulers": [
     80,
     120
   ],
+  "scm.showIncomingChanges": "never",
+  "scm.showOutgoingChanges": "never",
+  "scm.showActionButton": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "explorer.confirmDelete": false,
   "workbench.iconTheme": null,
-  "ruby.rubocop.executePath": "/home/permidon/.rbenv/shims/",
-  "ruby.rubocop.configFilePath": "/home/permidon/.rubocop.yml",
   "problems.decorations.enabled": false,
   "editor.scrollbar.verticalScrollbarSize": 20,
-  "ruby.useLanguageServer": true,
   "editor.guides.indentation": true,
   "git.enableSmartCommit": false,
   "git.showCommitInput": false,
-  "workbench.editor.untitled.hint": "hidden",
   "editor.bracketPairColorization.enabled": false,
-  "[ruby]": {
-    "editor.defaultFormatter": "misogi.ruby-rubocop"
-  },
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "Slime",
   "git.mergeEditor": false,
   "editor.lineNumbers": "relative",
   "vim.easymotion": false,
@@ -323,6 +317,36 @@
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false
-  }
+  },
+  "window.commandCenter": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.colorTheme": "Slime",
+  "workbench.activityBar.location": "hidden",
+  "rubyLsp.rubyVersionManager": "rbenv",
+  "rubyLsp.formatter": "rubocop",
+  "rubyLsp.enabledFeatures": {
+    "codeActions": false,
+    "diagnostics": false,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "signatureHelp": true
+  },
+  "rubyLsp.yjit": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.stickyScroll.enabled": false,
+  "workbench.sideBar.location": "left"
 }
-
