@@ -41,20 +41,9 @@ return {
   vimls = {
     filetypes = { "vim" },
   },
-  tsserver = {},
-  gopls = {},
-  pyright = {},
-  -- golangci_lint_ls = {},
-
   solidity_ls_nomicfoundation = {},
   yamlls = {
     cmd = { "yaml-language-server", "--stdio" },
     filetypes = { "yaml" },
   },
-  -- gleam = {
-  --   cmd = { "gleam", "lsp" },
-  --   filetypes = { "gleam" },
-  -- },
-
-  zls = {},
 }

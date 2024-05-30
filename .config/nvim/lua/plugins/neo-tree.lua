@@ -12,8 +12,8 @@ return {
   },
   event = "VeryLazy",
   keys = {
-    { "<leader>e",     ":Neotree toggle float<CR>", silent = true, desc = "Float File Explorer" },
-    { "<leader><tab>", ":Neotree toggle left<CR>",  silent = true, desc = "Left File Explorer" },
+    { "<leader><tab>",     ":Neotree toggle float<CR>", silent = true, desc = "Float File Explorer" },
+    { "<leader>e", ":Neotree toggle left<CR>",  silent = true, desc = "Left File Explorer" },
   },
   config = function()
     require("neo-tree").setup({
@@ -55,7 +55,7 @@ return {
         },
       },
       window = {
-        position = "float",
+        position = "left",
         width = 35,
       },
       filesystem = {

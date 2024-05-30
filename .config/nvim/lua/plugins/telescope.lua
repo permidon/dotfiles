@@ -9,7 +9,7 @@ return {
       "nvim-tree/nvim-web-devicons",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       "nvim-telescope/telescope-ui-select.nvim",
-      "telescope-dap.nvim",
+      -- "telescope-dap.nvim",
       "kkharji/sqlite.lua",
       -- "nvim-telescope/telescope-frecency.nvim",
     },
@@ -186,10 +186,10 @@ return {
       telescope.load_extension("fzf")
       telescope.load_extension("ui-select")
       -- telescope.load_extension("refactoring")
-      telescope.load_extension("dap")
+      -- telescope.load_extension("dap")
       -- telescope.load_extension("frecency")
-      telescope.load_extension("notify")
-      telescope.load_extension("package_info")
+      -- telescope.load_extension("notify")
+      -- telescope.load_extension("package_info")
     end,
   },
 }

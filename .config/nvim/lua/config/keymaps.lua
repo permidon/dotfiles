@@ -9,10 +9,6 @@ map("n", "<C-u>", "<C-u>zz", opts)
 map("v", "J", ":m '>+1<CR>gv=gv", opts)
 map("v", "K", ":m '<-2<CR>gv=gv", opts)
 
--- Fast saving
-map("n", "<Leader>w", ":write!<CR>", opts)
-map("n", "<Leader>q", ":q!<CR>", opts)
-
 -- Remap for dealing with visual line wraps
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
@@ -34,35 +30,6 @@ map("n", "YY", "va{Vy", opts)
 map("n", "j", "gj", opts)
 map("n", "k", "gk", opts)
 
--- Exit on jj and jk
-map("i", "jj", "<ESC>", opts)
-map("i", "jk", "<ESC>", opts)
-
--- Move to start/end of line
-map({ "n", "x", "o" }, "H", "^", opts)
-map({ "n", "x", "o" }, "L", "g_", opts)
-
--- Navigate buffers
-map("n", "<Right>", ":bnext<CR>", opts)
-map("n", "<Left>", ":bprevious<CR>", opts)
-
--- Panes resizing
-map("n", "+", ":vertical resize +5<CR>")
-map("n", "_", ":vertical resize -5<CR>")
-map("n", "=", ":resize +5<CR>")
-map("n", "-", ":resize -5<CR>")
-
--- Map enter to ciw in normal mode
-map("n", "<CR>", "ciw", opts)
-map("n", "<BS>", "ci", opts)
-
-map("n", "n", "nzzv", opts)
-map("n", "N", "Nzzv", opts)
-map("n", "*", "*zzv", opts)
-map("n", "#", "#zzv", opts)
-map("n", "g*", "g*zz", opts)
-map("n", "g#", "g#zz", opts)
-
 -- map ; to resume last search
 -- map("n", ";", "<cmd>Telescope resume<cr>", opts)
 
@@ -74,9 +41,6 @@ map("n", "<Leader>m", ":Telescope git_status<CR>", opts)
 
 -- Split line with X
 map("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
-
--- Select all
-map("n", "<C-a>", "ggVG", opts)
 
 -- write file in current directory
 -- :w %:h/<new-file-name>
@@ -90,7 +54,3 @@ map("n", "<C-n>", ":w %:h/", opts)
 map("n", "<C-P>", ':lua require("config.utils").toggle_go_test()<CR>', opts)
 
 map("n", "<Esc>", ":nohlsearch<CR>", opts)
-
--- ctrl + x to cut full line
-map("n", "<C-x>", "dd", opts)
-
