@@ -1,9 +1,37 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Set to superior editing mode
+set -o vi
+
+# keybinds
+bind -x '"\C-l":clear'
+
+# Environment Variables
+
+# export HISTFILE=~/.histfile
+export HISTSIZE=25000
+export SAVEHIST=25000
+export HISTCONTROL=ignorespace
+export VISUAL=nvim
+export EDITOR=nvim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # PATH
 export PATH="$HOME/.ebcli-virtual-env/executables:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME"/.config
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+source "$HOME/.aliases"
 
 # Determine git branch name
 function parse_git_branch {
@@ -37,3 +65,4 @@ branch_color_dirty="\[\e[0;31m\]"  # Red
 PROMPT_COMMAND=set_git_prompt
 
 export PS1
+
