@@ -1,3 +1,9 @@
+# Enable Zsh's extended globbing and null_glob options
+setopt extended_glob null_glob
+
+# Set to superior editing mode
+set -o vi
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -34,8 +40,12 @@ plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
+# get rid of mail notifications on MacOS
+unset MAILCHECK
+
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+export VISUAL=nvim
+export EDITOR=nvim
 export TERM=xterm-256color
 
 # key bindings
