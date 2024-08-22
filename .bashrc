@@ -5,7 +5,7 @@
 set -o vi
 
 # aliases
-source ~/.aliases
+source "$HOME/.aliases"
 
 # Environment Variables
 export HISTSIZE=25000

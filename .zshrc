@@ -5,12 +5,11 @@ setopt extended_glob null_glob
 set -o vi
 
 # aliases
-source ~/.aliases
+source "$HOME/.aliases"
 
 # Environment Variables
 export HISTSIZE=25000
 export SAVEHIST=25000
-export HISTCONTROL=ignoreboth
 export VISUAL=nvim
 export EDITOR=nvim
 export TERM="tmux-256color"
@@ -31,7 +30,7 @@ unset MAILCHECK
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 
-
+# History
 HISTFILE=~/.zsh_history
 setopt HIST_IGNORE_SPACE  # Don't save when prefixed with space
 setopt HIST_IGNORE_DUPS   # Don't save duplicate lines
