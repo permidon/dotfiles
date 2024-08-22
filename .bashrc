@@ -25,8 +25,8 @@ export LANG=en_US.UTF-8
 export PATH="$HOME/.ebcli-virtual-env/executables:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME"/.config
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 source "$HOME/.aliases"
 

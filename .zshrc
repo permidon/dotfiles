@@ -43,8 +43,9 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+export XDG_CONFIG_HOME="$HOME"/.config
 export PATH="$HOME/.pyenv/versions/3.7.2/bin:$PATH"
 export PATH="$HOME/.ebcli-virtual-env/executables:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
