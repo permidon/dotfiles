@@ -65,3 +65,7 @@ function set_git_prompt {
 
 # Set the git prompt when the prompt is displayed
 precmd_functions+=(set_git_prompt)
+
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
