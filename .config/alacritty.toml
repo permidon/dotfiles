@@ -1,47 +1,14 @@
-live_config_reload = true
-
 import = ["~/.config/alacritty/themes/gruvbox_material_hard_dark.toml"]
 
-[colors]
-draw_bold_text_with_bright_colors = true
-transparent_background_colors = true
-
-[cursor]
-unfocused_hollow = false
-
-[cursor.style]
-blinking = "Never"
-
-[env]
-TERM = "xterm-256color"
-
 [font]
-size = 15
-builtin_box_drawing = true
-
-[font.glyph_offset]
-y = 3
+size = 16
 
 [font.normal]
 family = "Berkeley Mono Nerd Font"
-# family = "FiraCode Nerd Font"
-
-[font.offset]
-y = 5
-
-[scrolling]
-history = 2000
 
 [window]
-decorations = "buttonless"
-# opacity = 0.98
-decorations_theme_variant = "Dark"
-dynamic_padding = true
-
-[window.dimensions]
-columns = 120
-lines = 30
+decorations = "none"
 
 [window.padding]
-x = 3
-y = 2
+x = 7
+y = 0

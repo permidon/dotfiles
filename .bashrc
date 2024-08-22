@@ -7,14 +7,17 @@ set -o vi
 # keybinds
 bind -x '"\C-l":clear'
 
-# Environment Variables
+# get rid of mail notifications on MacOS
+unset MAILCHECK
 
+# Environment Variables
 # export HISTFILE=~/.histfile
 export HISTSIZE=25000
 export SAVEHIST=25000
 export HISTCONTROL=ignorespace
 export VISUAL=nvim
 export EDITOR=nvim
+export TERM="tmux-256color"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -24,12 +27,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME"/.config
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
 
 source "$HOME/.aliases"
 
