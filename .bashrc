@@ -1,9 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Set to superior editing mode
-set -o vi
-
 # aliases
 source "$HOME/.aliases"
 

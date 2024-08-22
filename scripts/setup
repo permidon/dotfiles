@@ -15,7 +15,6 @@ ln -sf "$(dirname "$PWD")/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$(dirname "$PWD")/.bashrc" "$HOME"/.bashrc
 ln -sf "$(dirname "$PWD")/.inputrc" "$HOME"/.inputrc
 ln -sf "$(dirname "$PWD")/.tmux.conf" "$HOME"/.tmux.conf
-ln -sf "$(dirname "$PWD")/.zshrc" "$HOME"/.zshrc
 ln -sf "$PWD/bp-secure-connect" "$HOME"/.local/bin/bp-secure-connect
 
 if [[ "$OSTYPE" == "darwin"* ]]; then

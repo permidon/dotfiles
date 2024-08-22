@@ -1,4 +1,10 @@
+# Enable Vi mode for Readline
+set editing-mode vi
+
+# Ignore case for tab completion
 set completion-ignore-case on
+
+# Key bindings
 "\C-[OA": history-search-backward
 "\C-[[A": history-search-backward
 "\C-[OB": history-search-forward
