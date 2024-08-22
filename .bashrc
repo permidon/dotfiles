@@ -4,17 +4,13 @@
 # Set to superior editing mode
 set -o vi
 
-# keybinds
-bind -x '"\C-l":clear'
-
-# get rid of mail notifications on MacOS
-unset MAILCHECK
+# aliases
+source ~/.aliases
 
 # Environment Variables
-# export HISTFILE=~/.histfile
 export HISTSIZE=25000
 export SAVEHIST=25000
-export HISTCONTROL=ignorespace
+export HISTCONTROL=ignoreboth
 export VISUAL=nvim
 export EDITOR=nvim
 export TERM="tmux-256color"
@@ -28,8 +24,14 @@ export XDG_CONFIG_HOME="$HOME"/.config
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)"
 
-source "$HOME/.aliases"
+# get rid of mail notifications on MacOS
+unset MAILCHECK
 
+# Share history between sessions
+shopt -s histappend
+PROMPT_COMMAND='history -a; history -c; history -r'
+
+# Prompt
 # Determine git branch name
 function parse_git_branch {
   git branch 2> /dev/null | sed -n 's/^\* //p'
