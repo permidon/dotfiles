@@ -10,10 +10,12 @@ mkdir -p "$HOME"/.local/bin
 ln -sf "$(dirname "$PWD")/.config/nvim" "$XDG_CONFIG_HOME"/nvim
 ln -sf "$(dirname "$PWD")/.config/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty.toml
 ln -sf "$(dirname "$PWD")/.config/alacritty/themes/gruvbox_material_hard_dark.toml" "$XDG_CONFIG_HOME"/alacritty/themes/gruvbox_material_hard_dark.toml
+ln -sf "$(dirname "$PWD")/.config/aerospace" "$XDG_CONFIG_HOME"/aerospace
 ln -sf "$(dirname "$PWD")/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$(dirname "$PWD")/.bashrc" "$HOME"/.bashrc
 ln -sf "$(dirname "$PWD")/.inputrc" "$HOME"/.inputrc
 ln -sf "$(dirname "$PWD")/.tmux.conf" "$HOME"/.tmux.conf
+ln -sf "$(dirname "$PWD")/.zshrc" "$HOME"/.zshrc
 ln -sf "$PWD/bp-secure-connect" "$HOME"/.local/bin/bp-secure-connect
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
