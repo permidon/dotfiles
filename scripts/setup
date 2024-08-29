@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# create directories
+# Variables
 export XDG_CONFIG_HOME="$HOME"/.config
+export ICLOUD="${HOME}"/Library/Mobile\ Documents/com~apple~CloudDocs
 
-mkdir -p "$XDG_CONFIG_HOME"/alacritty/themes
+# Directories
 mkdir -p "$HOME"/.local/bin
 
 # Symbolic links
 ln -sf "$(dirname "$PWD")/.config/nvim" "$XDG_CONFIG_HOME"/nvim
+ln -sf "$(dirname "$PWD")/.config/alacritty" "$XDG_CONFIG_HOME"/alacritty
 ln -sf "$(dirname "$PWD")/.config/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty.toml
-ln -sf "$(dirname "$PWD")/.config/alacritty/themes/gruvbox_material_hard_dark.toml" "$XDG_CONFIG_HOME"/alacritty/themes/gruvbox_material_hard_dark.toml
 ln -sf "$(dirname "$PWD")/.config/aerospace" "$XDG_CONFIG_HOME"/aerospace
 ln -sf "$(dirname "$PWD")/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$(dirname "$PWD")/.bashrc" "$HOME"/.bashrc
@@ -18,7 +19,6 @@ ln -sf "$(dirname "$PWD")/.tmux.conf" "$HOME"/.tmux.conf
 ln -sf "$PWD/bp-secure-connect" "$HOME"/.local/bin/bp-secure-connect
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  export ICLOUD=("${HOME}/Library/Mobile Documents/com~apple~CloudDocs")
-  ln -sf "$ICLOUD" ~/icloud
-  ln -sf ~/icloud/Config/Dotfiles/.aliases "$HOME"/.aliases
+  ln -sf "$ICLOUD" "$HOME"/icloud
+  ln -sf "$HOME"/icloud/Config/Dotfiles/.aliases "$HOME"/.aliases
 fi
