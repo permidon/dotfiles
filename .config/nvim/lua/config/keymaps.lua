@@ -30,27 +30,4 @@ map("n", "YY", "va{Vy", opts)
 map("n", "j", "gj", opts)
 map("n", "k", "gk", opts)
 
--- map ; to resume last search
--- map("n", ";", "<cmd>Telescope resume<cr>", opts)
-
--- search current buffer
-map("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
-
--- search modified files
-map("n", "<Leader>m", ":Telescope git_status<CR>", opts)
-
--- Split line with X
-map("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
-
--- write file in current directory
--- :w %:h/<new-file-name>
-map("n", "<C-n>", ":w %:h/", opts)
-
--- delete forward
--- w{number}dw
--- delete backward
--- w{number}db
-
-map("n", "<C-P>", ':lua require("config.utils").toggle_go_test()<CR>', opts)
-
 map("n", "<Esc>", ":nohlsearch<CR>", opts)

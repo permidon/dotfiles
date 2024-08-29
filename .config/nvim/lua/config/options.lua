@@ -1,9 +1,7 @@
 vim.g.mapleader = " "                           -- change leader to a space
 vim.g.maplocalleader = " "                      -- change localleader to a space
-
 vim.g.loaded_netrw = 1                          -- disable netrw
-vim.g.loaded_netrwPlugin = 1                    --  disable netrw
-
+vim.g.loaded_netrwPlugin = 1                    -- disable netrw
 vim.opt.incsearch = true                        -- make search act like search in modern browsers
 vim.opt.backup = false                          -- creates a backup file
 vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
@@ -44,9 +42,8 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 vim.opt.title = true                            -- set the title of window to the value of the titlestring
 vim.opt.confirm = true                          -- confirm to save changes before exiting modified buffer
 vim.opt.fillchars = { eob = " " }               -- change the character at the end of buffer
--- vim.opt.guicursor = ""                          -- set the cursor to be a vertical bar
-
--- vim.opt.cursorlineopt = "number"              -- set the cursorline
--- vim.opt.tabstop = 2                           -- insert 2 spaces for a tab
+vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
+vim.opt.softtabstop = 2                             -- insert 2 spaces for a tab
 vim.opt.laststatus = 0                          -- Always display the status line
-
+-- vim.opt.guicursor = ""                          -- set the cursor to be a vertical bar
+-- vim.opt.cursorlineopt = "number"                -- set the cursorline

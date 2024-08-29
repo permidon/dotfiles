@@ -38,12 +38,6 @@ return {
           "vim",
           "vimdoc",
           "yaml",
-          "rust",
-          "go",
-          "gomod",
-          "gowork",
-          "gosum",
-          "terraform",
           "proto",
         },
         incremental_selection = {
