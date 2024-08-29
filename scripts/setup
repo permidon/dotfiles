@@ -20,5 +20,5 @@ ln -sf "$PWD/bp-secure-connect" "$HOME"/.local/bin/bp-secure-connect
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   ln -sf "$ICLOUD" "$HOME"/icloud
-  ln -sf "$HOME"/icloud/Config/Dotfiles/.aliases "$HOME"/.aliases
+  ln -sf "$ICLOUD"/Config/Dotfiles/.aliases "$HOME"/.aliases
 fi
