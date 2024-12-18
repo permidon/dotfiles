@@ -1,9 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# aliases
-source "$HOME/.aliases"
-
 # Environment Variables
 export HISTSIZE=25000
 export SAVEHIST=25000
@@ -27,6 +24,9 @@ unset MAILCHECK
 # Share history between sessions
 shopt -s histappend
 PROMPT_COMMAND='history -a; history -c; history -r'
+
+# aliases
+source "$HOME/.aliases"
 
 # Prompt
 # Determine git branch name
@@ -62,3 +62,4 @@ PROMPT_COMMAND=set_git_prompt
 
 export PS1
 
+eval "$(direnv hook bash)"
