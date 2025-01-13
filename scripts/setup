@@ -10,6 +10,8 @@ mkdir -p "$HOME"/.local/bin
 # Symbolic links
 ln -sf "$(dirname "$PWD")/.config/nvim" "$XDG_CONFIG_HOME"/nvim
 ln -sf "$(dirname "$PWD")/.config/ghostty" "$XDG_CONFIG_HOME"/ghostty
+ln -sf "$(dirname "$PWD")/.config/alacritty" "$XDG_CONFIG_HOME"/alacritty
+ln -sf "$(dirname "$PWD")/.config/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty.toml
 ln -sf "$(dirname "$PWD")/.config/aerospace" "$XDG_CONFIG_HOME"/aerospace
 ln -sf "$(dirname "$PWD")/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$(dirname "$PWD")/.bashrc" "$HOME"/.bashrc
