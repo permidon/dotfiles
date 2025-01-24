@@ -10,6 +10,7 @@ export EDITOR=nvim
 export TERM="tmux-256color"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export COMPOSE_MENU=false
 
 # PATH
 export PATH="$HOME/.ebcli-virtual-env/executables:$PATH"

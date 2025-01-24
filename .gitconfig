@@ -23,7 +23,6 @@
   sta  = stash
   stap = stash apply
   uall = reset .
-  sync = !git pull origin master && git push nikolalsvk master
   type = cat-file -t
   dump = cat-file -p
 
