@@ -62,4 +62,8 @@ PROMPT_COMMAND=set_git_prompt
 
 export PS1
 
-eval "$(direnv hook bash)"
+# eval "$(direnv hook bash)"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
