@@ -44,6 +44,7 @@ common_items=(
   ".bash_profile:$HOME/.bash_profile"
   ".inputrc:$HOME/.inputrc"
   ".tmux.conf:$HOME/.tmux.conf"
+  ".config/git:$XDG_CONFIG_HOME/git"
   ".config/nvim:$XDG_CONFIG_HOME/nvim"
   ".config/ghostty:$XDG_CONFIG_HOME/ghostty"
   "scripts/bp-secure-connect:$HOME/.local/bin/bp-secure-connect"
