@@ -2,30 +2,6 @@
   name  = Roman Perminov
   email = permidon@me.com
 
-[credential]
-  helper = GIT_CREDENTIAL_HELPER
-
-[alias]
-  a    = add
-  all  = add -A
-  st   = status -sb
-  ci   = commit -m
-  ca   = commit --amend
-  br   = branch
-  co   = checkout
-  df   = diff
-  dfc  = diff --cached
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  lg   = log --pretty=format:'%C(yellow)%h%Creset %Cgreen(%><(12)%cr%><|(12))%Creset - %s %C(blue)<%an>%Creset'
-  pl   = pull
-  ps   = push
-  undo = reset --soft HEAD^
-  sta  = stash
-  stap = stash apply
-  uall = reset .
-  type = cat-file -t
-  dump = cat-file -p
-
 [color]
   diff   = auto
   status = auto
@@ -55,3 +31,6 @@
 
 [push]
   default = current
+
+# [commit]
+#   gpgsign = true
