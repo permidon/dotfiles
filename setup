@@ -46,6 +46,7 @@ common_items=(
   ".tmux.conf:$HOME/.tmux.conf"
   ".config/git:$XDG_CONFIG_HOME/git"
   ".config/nvim:$XDG_CONFIG_HOME/nvim"
+  ".config/tmux:$XDG_CONFIG_HOME/tmux"
   ".config/ghostty:$XDG_CONFIG_HOME/ghostty"
   "scripts/bp-secure-connect:$HOME/.local/bin/bp-secure-connect"
 )
