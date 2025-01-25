@@ -9,7 +9,6 @@
   ui     = true
 
 [core]
-  excludesfile = ~/.gitignore
   editor       = vim
   autocrlf     = input
   safecrlf     = false
