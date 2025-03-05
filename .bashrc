@@ -7,7 +7,6 @@ export SAVEHIST=25000
 export HISTCONTROL=ignoreboth
 export VISUAL=nvim
 export EDITOR=nvim
-export TERM="tmux-256color"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export COMPOSE_MENU=false
