@@ -5,7 +5,7 @@ import = ["~/.config/alacritty/themes/catbox.toml"]
 size = 16
 
 [font.normal]
-family = "TX-02"
+family = "Berkeley Mono"
 
 [window]
 decorations = "none"
