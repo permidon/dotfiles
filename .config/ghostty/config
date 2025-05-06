@@ -4,12 +4,12 @@ theme = GruvboxDarkHard
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style = block
 cursor-style-blink = false
-# adjust-cell-height = 35%
+adjust-cell-height = 15%
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 
-window-padding-balance = true 
+window-padding-balance = true
 window-save-state = always
 macos-titlebar-style = hidden
 quit-after-last-window-closed = true
@@ -22,7 +22,7 @@ keybind = cmd+s>x=close_surface
 
 keybind = cmd+s>n=new_window
 
-# tabs 
+# tabs
 keybind = cmd+s>c=new_tab
 keybind = cmd+s>shift+l=next_tab
 keybind = cmd+s>shift+h=previous_tab

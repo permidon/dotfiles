@@ -175,8 +175,15 @@ if.app-id = 'org.mozilla.firefox'
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
+if.app-id = 'org.alacritty'
 run = "move-node-to-workspace 2"
+
+[[on-window-detected]]
+if.app-id="com.mitchellh.ghostty"
+run= [
+  "layout tiling",
+  "move-node-to-workspace 2"
+]
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
@@ -199,9 +206,9 @@ if.app-id = 'com.hey.app.desktop'
 run = "move-node-to-workspace 7"
 
 [[on-window-detected]]
-if.app-id = 'com.roon.Roon'
+if.app-id = 'md.obsidian'
 run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
-if.app-id = 'md.obsidian'
+if.app-id = 'com.roon.Roon'
 run = "move-node-to-workspace 9"
