@@ -4,9 +4,20 @@ return {
     cmd = "Telescope",
     version = false,
     lazy = true,
+    keys = {
+      {
+        "<leader>ff",
+        "<cmd>Telescope find_files<cr>",
+        desc = "Telescope find files",
+      },
+      {
+        "<leader>st",
+        "<cmd>Telescope live_grep<cr>",
+        desc = "Telescope live grep",
+      },
+    },
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       "nvim-telescope/telescope-ui-select.nvim",
       -- "telescope-dap.nvim",
@@ -17,7 +28,6 @@ return {
       local telescope = require("telescope")
       local actions = require("telescope.actions")
       local trouble = require("trouble.sources.telescope")
-      local icons = require("config.icons")
 
       vim.api.nvim_create_autocmd("FileType", {
         pattern = "TelescopeResults",
@@ -55,13 +65,10 @@ return {
             "filename_first",
           },
           previewer = false,
-          prompt_prefix = " " .. icons.ui.Telescope .. " ",
-          selection_caret = icons.ui.BoldArrowRight .. " ",
           file_ignore_patterns = { "node_modules", "package-lock.json" },
           initial_mode = "insert",
           select_strategy = "reset",
           sorting_strategy = "ascending",
-          color_devicons = true,
           set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
           layout_config = {
             prompt_position = "top",

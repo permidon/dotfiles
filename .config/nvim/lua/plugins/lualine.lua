@@ -48,7 +48,7 @@ return {
           { "fancy_searchcount" },
         },
         lualine_x = {
-          "fancy_lsp_servers",
+          -- "fancy_lsp_servers",
           "fancy_diff",
           "progress",
         },

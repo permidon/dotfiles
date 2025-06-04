@@ -1,10 +1,9 @@
-font-family = TX-02
+font-family = Berkeley Mono
 font-size = 16
 theme = GruvboxDarkHard
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style = block
 cursor-style-blink = false
-adjust-cell-height = 15%
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
