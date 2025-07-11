@@ -43,7 +43,6 @@ common_items=(
   ".bashrc:$HOME/.bashrc"
   ".bash_profile:$HOME/.bash_profile"
   ".inputrc:$HOME/.inputrc"
-  ".tmux.conf:$HOME/.tmux.conf"
   ".config/git:$XDG_CONFIG_HOME/git"
   ".config/nvim:$XDG_CONFIG_HOME/nvim"
   ".config/tmux:$XDG_CONFIG_HOME/tmux"
