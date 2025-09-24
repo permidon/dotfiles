@@ -2,12 +2,7 @@
 
 # Variables
 XDG_CONFIG_HOME="$HOME/.config"
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  DOTFILES_DIR="$HOME/Developer/dotfiles"
-else
-  DOTFILES_DIR="$HOME/code/dotfiles"
-fi
+DOTFILES_DIR="$PWD"
 
 create_directories() {
   local directories=("$@")
