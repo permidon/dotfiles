@@ -1,7 +1,7 @@
 #!/bin/bash
-
 # Variables
 XDG_CONFIG_HOME="$HOME/.config"
+XDG_BIN_HOME="$HOME/.local/bin"
 DOTFILES_DIR="$PWD"
 
 create_directories() {
@@ -15,6 +15,30 @@ create_symlinks() {
   local items=("$@")
   for item in "${items[@]}"; do
     IFS=':' read -r source target <<<"$item"
+    
+    # Handle wildcard patterns
+    if [[ "$source" == *"*"* ]]; then
+      echo "Processing directory pattern: $source"
+      for file in $DOTFILES_DIR/$source; do
+        if [ -e "$file" ]; then
+          local basename=$(basename "$file")
+          local dest="$target$basename"
+          
+          if [ -L "$dest" ]; then
+            echo "Removing existing symlink $dest"
+            unlink "$dest"
+          elif [ -e "$dest" ]; then
+            echo "Warning: $dest already exists. Skipping..."
+            continue
+          fi
+          
+          ln -s "$file" "$dest"
+          echo "Created symlink for $(basename "$file")"
+        fi
+      done
+      continue
+    fi
+    
     if [ -L "$target" ]; then
       echo "Removing existing symlink $target"
       unlink "$target"
@@ -25,13 +49,14 @@ create_symlinks() {
       echo "Warning: $target already exists. Skipping..."
       continue
     fi
+    
     ln -s "$DOTFILES_DIR/$source" "$target"
     echo "Created symlink for $source"
   done
 }
 
 common_directories=(
-  "$HOME/.local/bin"
+  "$XDG_BIN_HOME"
 )
 
 common_items=(
@@ -43,7 +68,9 @@ common_items=(
   ".config/tmux:$XDG_CONFIG_HOME/tmux"
   ".config/ghostty:$XDG_CONFIG_HOME/ghostty"
   ".config/alacritty:$XDG_CONFIG_HOME/alacritty"
-  "./scripts/*:$HOME/.local/bin/"
+  "scripts/dome/*:$XDG_BIN_HOME/"
+  "scripts/omarchy/*:$XDG_BIN_HOME/"
+  "scripts/mischa/*:$XDG_BIN_HOME/"
 )
 
 create_directories "${common_directories[@]}"
