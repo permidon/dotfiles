@@ -1,15 +1,21 @@
 [general]
 import = ["~/.config/alacritty/themes/catbox.toml"]
 
-[font]
-size = 16
+[env]
+TERM = "xterm-256color"
 
-[font.normal]
-family = "Berkeley Mono"
+[font]
+size = 13
+normal = { family = "Berkeley Mono" }
+bold   = { family = "Berkeley Mono" }
+italic = { family = "Berkeley Mono" }
 
 [window]
 decorations = "none"
+padding.x   = 14
+padding.y   = 14
 
-[window.padding]
-x = 7
-y = 0
+[keyboard]
+bindings = [
+  { key = "F11", action = "ToggleFullscreen" }
+]
