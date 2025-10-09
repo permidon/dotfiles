@@ -11,9 +11,19 @@ return {
         desc = "Telescope find files",
       },
       {
-        "<leader>st",
+        "<leader>ft",
         "<cmd>Telescope live_grep<cr>",
         desc = "Telescope live grep",
+      },
+      {
+        "<leader>fg",
+        "<cmd>Telescope git_status<cr>",
+        desc = "Telescope git_status",
+      },
+      {
+        "<leader>fb",
+        "<cmd>Telescope buffers<cr>",
+        desc = "Telescope buffers",
       },
     },
     dependencies = {
