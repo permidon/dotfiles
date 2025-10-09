@@ -2,12 +2,7 @@
 
 # Variables
 XDG_CONFIG_HOME="$HOME/.config"
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  DOTFILES_DIR="$HOME/Developer/dotfiles"
-else
-  DOTFILES_DIR="$HOME/code/dotfiles"
-fi
+DOTFILES_DIR="$PWD"
 
 create_directories() {
   local directories=("$@")
@@ -43,7 +38,6 @@ common_items=(
   ".bashrc:$HOME/.bashrc"
   ".bash_profile:$HOME/.bash_profile"
   ".inputrc:$HOME/.inputrc"
-  ".tmux.conf:$HOME/.tmux.conf"
   ".config/git:$XDG_CONFIG_HOME/git"
   ".config/nvim:$XDG_CONFIG_HOME/nvim"
   ".config/tmux:$XDG_CONFIG_HOME/tmux"
