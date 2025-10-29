@@ -17,5 +17,5 @@ padding.y   = 14
 
 [keyboard]
 bindings = [
-  { key = "F11", action = "ToggleFullscreen" }
+  { key = "F11", action = "ToggleFullscreen" },
 ]
