@@ -1,3 +1,6 @@
+# Enable Vi mode for Readline
+set editing-mode vi
+
 set input-meta on
 set output-meta on
 set convert-meta off
@@ -7,10 +10,8 @@ set show-all-if-ambiguous on
 set show-all-if-unmodified on
 
 # Arrow keys match what you've typed so far against your command history
-"\C-[OA": history-search-backward
-"\C-[[A": history-search-backward
-"\C-[OB": history-search-forward
-"\C-[[B": history-search-forward
+"\e[A": history-search-backward
+"\e[B": history-search-forward
 "\e[C": forward-char
 "\e[D": backward-char
 
@@ -38,6 +39,3 @@ set skip-completed-text on
 
 # Coloring for Bash 4 tab completions.
 set colored-stats on
-
-# Enable Vi mode for Readline
-set editing-mode vi
