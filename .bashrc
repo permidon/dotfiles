@@ -2,8 +2,9 @@
 [[ $- != *i* ]] && return
 
 # Environment Variables
-export HISTSIZE=25000
-export SAVEHIST=25000
+export HISTSIZE=32768
+export SAVEHIST="${HISTSIZE}"
+export HISTFILESIZE="${HISTSIZE}"
 export HISTCONTROL=ignoreboth
 export VISUAL=nvim
 export EDITOR=nvim
@@ -29,6 +30,11 @@ PROMPT_COMMAND='history -a; history -c; history -r'
 source "$HOME/.aliases"
 
 # Prompt
+
+# Technicolor dreams
+force_color_prompt=yes
+color_prompt=yes
+
 # Determine git branch name
 function parse_git_branch {
   git branch 2> /dev/null | sed -n 's/^\* //p'
@@ -66,4 +72,9 @@ export PS1
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+# Autocompletion
+if [[ ! -v BASH_COMPLETION_VERSINFO && -f /usr/share/bash-completion/bash_completion ]]; then
+  source /usr/share/bash-completion/bash_completion
 fi
