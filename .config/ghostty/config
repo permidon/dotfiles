@@ -2,7 +2,7 @@ theme = Gruvbox Dark Hard
 background = 1C2021
 
 font-family = Berkeley Mono
-font-size = 16
+font-size = 13
 
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style = block
