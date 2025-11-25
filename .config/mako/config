@@ -1,1 +1,5 @@
-/home/roman/.config/omarchy/current/theme/mako.ini
+include=mako.ini
+
+text-color=#e6d9db
+border-color=#e6d9db
+background-color=#2c2525
