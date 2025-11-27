@@ -5,17 +5,19 @@ import = ["~/.config/alacritty/themes/catbox.toml"]
 TERM = "xterm-256color"
 
 [font]
-size = 13
-normal = { family = "Berkeley Mono" }
-bold   = { family = "Berkeley Mono" }
-italic = { family = "Berkeley Mono" }
+size = 12
+normal = { family = "Berkeley Mono", style = "Regular" }
+bold   = { family = "Berkeley Mono", style = "Bold" }
+italic = { family = "Berkeley Mono", style = "Italic" }
 
 [window]
 decorations = "none"
-padding.x   = 14
-padding.y   = 14
+padding.x = 14
+padding.y = 14
 
 [keyboard]
 bindings = [
   { key = "F11", action = "ToggleFullscreen" },
+  { key = "Insert", mods = "Shift", action = "Paste" },
+  { key = "Insert", mods = "Control", action = "Copy" }
 ]
