@@ -1,11 +1,11 @@
 [general]
-import = ["~/.config/alacritty/themes/catbox.toml"]
+import = ["~/.config/alacritty/themes/osaka-jade.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 12
+size = 13
 normal = { family = "Berkeley Mono", style = "Regular" }
 bold   = { family = "Berkeley Mono", style = "Bold" }
 italic = { family = "Berkeley Mono", style = "Italic" }
