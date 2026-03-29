@@ -1,6 +1,7 @@
 # Colors
-theme = Gruvbox Dark Hard
-background = 1C2021
+# theme = Gruvbox Dark Hard
+# background = 1C2021
+config-file = ?"~/.config/ghostty/theme"
 
 # Font
 font-family = Berkeley Mono
