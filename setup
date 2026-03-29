@@ -15,7 +15,7 @@ create_symlinks() {
   local items=("$@")
   for item in "${items[@]}"; do
     IFS=':' read -r source target <<<"$item"
-    
+
     # Handle wildcard patterns
     if [[ "$source" == *"*"* ]]; then
       echo "Processing directory pattern: $source"
@@ -23,7 +23,7 @@ create_symlinks() {
         if [ -e "$file" ]; then
           local basename=$(basename "$file")
           local dest="$target$basename"
-          
+
           if [ -L "$dest" ]; then
             echo "Removing existing symlink $dest"
             unlink "$dest"
@@ -31,14 +31,14 @@ create_symlinks() {
             echo "Warning: $dest already exists. Skipping..."
             continue
           fi
-          
+
           ln -s "$file" "$dest"
           echo "Created symlink for $(basename "$file")"
         fi
       done
       continue
     fi
-    
+
     if [ -L "$target" ]; then
       echo "Removing existing symlink $target"
       unlink "$target"
@@ -49,7 +49,7 @@ create_symlinks() {
       echo "Warning: $target already exists. Skipping..."
       continue
     fi
-    
+
     ln -s "$DOTFILES_DIR/$source" "$target"
     echo "Created symlink for $source"
   done
@@ -60,42 +60,21 @@ common_directories=(
 )
 
 common_items=(
-  ".bashrc:$HOME/.bashrc"
-  ".bash_profile:$HOME/.bash_profile"
-  ".inputrc:$HOME/.inputrc"
-  ".config/git:$XDG_CONFIG_HOME/git"
-  ".config/nvim:$XDG_CONFIG_HOME/nvim"
-  ".config/background:$XDG_CONFIG_HOME/background"
-  ".config/fontconfig:$XDG_CONFIG_HOME/fontconfig"
-  ".config/hypr:$XDG_CONFIG_HOME/hypr"
-  ".config/lazydocker:$XDG_CONFIG_HOME/lazydocker"
-  ".config/lazygit:$XDG_CONFIG_HOME/lazygit"
-  ".config/mako:$XDG_CONFIG_HOME/mako"
-  ".config/mise:$XDG_CONFIG_HOME/mise"
-  ".config/swayosd:$XDG_CONFIG_HOME/swayosd"
-  ".config/tmux:$XDG_CONFIG_HOME/tmux"
-  ".config/walker:$XDG_CONFIG_HOME/walker"
-  ".config/waybar:$XDG_CONFIG_HOME/waybar"
-  ".config/ghostty:$XDG_CONFIG_HOME/ghostty"
-  ".config/kitty:$XDG_CONFIG_HOME/kitty"
-  ".config/alacritty:$XDG_CONFIG_HOME/alacritty"
-  "scripts/dome/*:$XDG_BIN_HOME/"
-  "scripts/omarchy/*:$XDG_BIN_HOME/"
-  "scripts/mischa/*:$XDG_BIN_HOME/"
+  "configs/bashrc:$HOME/.bashrc"
+  "configs/bash_profile:$HOME/.bash_profile"
+  "configs/bash:$XDG_CONFIG_HOME/bash"
+  "configs/git:$XDG_CONFIG_HOME/git"
+  "configs/nvim:$XDG_CONFIG_HOME/nvim"
+  # "configs/hypr:$XDG_CONFIG_HOME/hypr"
+  "configs/mako:$XDG_CONFIG_HOME/mako"
+  "configs/mise:$XDG_CONFIG_HOME/mise"
+  "configs/swayosd:$XDG_CONFIG_HOME/swayosd"
+  "configs/tmux:$XDG_CONFIG_HOME/tmux"
+  # "configs/walker:$XDG_CONFIG_HOME/walker"
+  "configs/waybar:$XDG_CONFIG_HOME/waybar"
+  "configs/alacritty:$XDG_CONFIG_HOME/alacritty"
+  "scripts/*:$XDG_BIN_HOME/"
 )
 
 create_directories "${common_directories[@]}"
 create_symlinks "${common_items[@]}"
-
-# MacOS specific setup
-if [[ "$OSTYPE" == darwin* ]]; then
-  printf -v ICLOUD "%s" "$HOME/Library/Mobile Documents/com~apple~CloudDocs"
-  ln -sf "$ICLOUD" "$HOME/iCloud"
-  ln -sf "$ICLOUD/Config/Dotfiles/.aliases" "$HOME/.aliases"
-
-  macos_items=(
-    ".config/aerospace:$XDG_CONFIG_HOME/aerospace"
-  )
-
-  create_symlinks "${macos_items[@]}"
-fi
