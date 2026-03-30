@@ -66,6 +66,7 @@ common_items=(
   "configs/git:$XDG_CONFIG_HOME/git"
   "configs/nvim:$XDG_CONFIG_HOME/nvim"
   # "configs/hypr:$XDG_CONFIG_HOME/hypr"
+  "configs/sway:$XDG_CONFIG_HOME/sway"
   "configs/mako:$XDG_CONFIG_HOME/mako"
   "configs/mise:$XDG_CONFIG_HOME/mise"
   "configs/swayosd:$XDG_CONFIG_HOME/swayosd"
