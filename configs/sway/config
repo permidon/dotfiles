@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
-set $menu wmenu-run
+set $menu wofi --show drun
 
 ### Output configuration
 #
@@ -79,6 +79,7 @@ input "type:keyboard" {
     bindsym $mod+d exec $menu
 
     bindsym $mod+f exec nautilus --new-window
+    bindsym $mod+b exec firefox
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -227,4 +228,17 @@ bar {
 
 default_border pixel 1
 
+# Border colors
+client.focused #f38d70 #2c2525 #e6d9db #f38d70 #f38d70
+
+# Gaps
+gaps outer 10
+
+exec swayosd-server
+# Volume keys
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
+bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+
+bindsym Control+Shift+4 exec /home/roman/.local/bin/screenshot
 include /etc/sway/config.d/*
